@@ -1,0 +1,5 @@
+packages:
+- .
+- ../hot
+resolver: lts-7.0
+system-ghc: false
