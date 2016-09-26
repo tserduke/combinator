@@ -28,3 +28,19 @@ library
     default-language:   Haskell2010
     default-extensions:
     ghc-options:        -O2 -Wall
+
+
+test-suite subset
+    type:               exitcode-stdio-1.0
+    hs-source-dirs:     test
+    main-is:            SubsetTest.hs
+    build-depends:      base < 5,
+                        combinator,
+                        hot,
+                        hspec,
+                        QuickCheck
+    default-language:   Haskell2010
+    default-extensions: DataKinds
+                        KindSignatures
+                        ScopedTypeVariables
+    ghc-options:        -O2 -Wall -threaded -rtsopts -with-rtsopts=-N
