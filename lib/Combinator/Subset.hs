@@ -3,25 +3,29 @@ module Combinator.Subset where
 import Data.Hot
 
 
-subsetCount :: Int -> Int -> Integer
+type N = Int
+type K = Int
+
+
+subsetCount :: K -> N -> Integer
 subsetCount = undefined
 
 
-subsetFromNum :: (Integral a) => Int -> Int -> Integer -> [a]
+subsetFromNum :: (Integral a) => K -> N -> Integer -> [a]
 subsetFromNum = undefined
 
-subsetToNum :: (Foldable t, Integral a) => Int -> Int -> t a -> Integer
+subsetToNum :: (Foldable t, Integral a) => K -> N -> t a -> Integer
 subsetToNum = undefined
 
 
 {-# INLINE subsets #-}
-subsets :: (Num a) => Int -> [Hot n a]
+subsets :: (Num a) => N -> [Hot k a]
 subsets = subsetsFilter (const True)
 
 {-# INLINABLE subsetsFilter #-}
-subsetsFilter :: (Num a) => (a -> Bool) -> Int -> [Hot n a]
+subsetsFilter :: (Num a) => (a -> Bool) -> N -> [Hot k a]
 subsetsFilter = undefined
 
 
---subsetsSelect :: (Num a) => (a -> b) -> Int -> [Hot n b]
---subsetsSelectFilter :: (Num a) => (a -> b) -> (a -> Bool) -> Int -> [Hot n b]
+--subsetsSelect :: (Num a) => (a -> b) -> N -> [Hot k b]
+--subsetsSelectFilter :: (Num a) => (a -> b) -> (a -> Bool) -> N -> [Hot k b]
